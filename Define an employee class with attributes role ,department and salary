@@ -1,0 +1,34 @@
+
+class Employee:
+    
+    def __init__(self,role,department,salary):
+        self.role = role
+        self.department = department
+        self.salary = salary
+
+    def showDetails(self):
+        print("Role:", self.role)
+        print("Department:",self.department)
+        print("Salary:", self.salary)
+
+class Engineer(Employee):
+        
+        def __init__(self,name,age):
+            self.name = name
+            self.age = age
+            super().__init__("HR","FINANCE","3000")
+       
+        def showDetails(self):
+
+            print("Name:",self.name)
+            print("Age:", self.age)
+            super().showDetails()
+
+           
+
+e1 = Engineer("Shreeya", 35)
+e1.showDetails()
+
+
+
+          
